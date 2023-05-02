@@ -39,6 +39,10 @@ public class Instantiation implements CommandLineRunner {
 		coverageAreaRepository.deleteAll();
 		addressRepository.deleteAll();
 
+		/*partnerRepository.deleteAll();
+		coverageAreaRepository.deleteAll();
+		addressRepository.deleteAll();
+
 		WKTReader reader = new WKTReader();
 		Geometry geometry = null;
 
@@ -69,7 +73,7 @@ public class Instantiation implements CommandLineRunner {
 
 		partnerRepository.saveAll(List.of(p));
 		coverageAreaRepository.saveAll(List.of(ca1));
-		addressRepository.saveAll(List.of(ad1));
+		addressRepository.saveAll(List.of(ad1));*/
 	}
 
 }

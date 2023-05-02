@@ -24,8 +24,7 @@ public class Address implements Serializable {
     @JsonIgnore
     private TypeGEO type;
 
-    @JsonSerialize(using = GeometrySerializer.class)
-    @JsonDeserialize(contentUsing = GeometryDeserializer.class)
+    @JsonIgnore
     private Point coordinates;
 
     @OneToOne
@@ -67,4 +66,13 @@ public class Address implements Serializable {
         this.coordinates = coordinates;
     }
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", type=" + type +
+                ", coordinates=" + coordinates +
+                ", partner=" + partner +
+                '}';
+    }
 }
