@@ -56,6 +56,11 @@ public class PartnerService {
            }
        }
     }
+    public void DeletePartner(Long id){
+        addressRepository.deleteById(id);
+        coverageRepository.deleteById(id);
+        repo.deleteById(id);
+    }
 
     public List<Partner> getAllPartners(){
         Optional<List<Partner>> partner = Optional.of(repo.findAll());

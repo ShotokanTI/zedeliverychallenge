@@ -33,6 +33,12 @@ public class PartnerResource {
             service.SavePartner(partner);
         return ResponseEntity.ok().body(partner);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> DeletePartner(@PathVariable Long id){
+            service.DeletePartner(id);
+        return ResponseEntity.ok().body("ID DELETED: " + id);
+    }
     @PutMapping
     public ResponseEntity<PartnerDTO> UpdatePartner(@RequestBody PartnerDTO partner){
             service.UpdatePartner(partner);
