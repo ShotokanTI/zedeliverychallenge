@@ -1,3 +1,10 @@
----
 applications:
   - name: ZE-CODE
+    path: ./target/ZE-CODE-cf
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+      SPRING_DATASOURCE_URL: jdbc:postgresql://https://api.de.a9s.eu:8080/zedelivery?sslmode=require
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: admin
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+      JBP_CONFIG_SAP_MACHINE_JRE: '{ jre: { version: "11.+" } }'
