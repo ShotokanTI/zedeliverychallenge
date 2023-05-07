@@ -1,8 +1,6 @@
 package com.zecodechallenge.zecode.entities;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.zecodechallenge.zecode.util.MultiPolygonSerializer;
 import jakarta.persistence.*;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.Polygon;
